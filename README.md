@@ -169,6 +169,7 @@ This project is open source and available under the Apache License 2.0. See the 
 ## 📞 **Support**
 
 For technical support or feature requests, please contact the development team.
+rashidlansahadam@gmail.com
 
 ---
 
