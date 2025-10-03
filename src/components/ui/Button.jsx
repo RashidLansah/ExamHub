@@ -5,6 +5,9 @@ const Button = ({
   variant = "default", 
   size = "default", 
   className = "", 
+  ariaLabel,
+  ariaDescribedBy,
+  role,
   ...props 
 }) => {
   const baseClasses = "inline-flex items-center justify-center rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-white"
@@ -33,6 +36,9 @@ const Button = ({
         sizes[size],
         className
       )}
+      aria-label={ariaLabel}
+      aria-describedby={ariaDescribedBy}
+      role={role}
       {...props}
     >
       {children}

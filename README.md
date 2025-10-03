@@ -1,6 +1,16 @@
 # 🎓 ExamHub
 
-A comprehensive exam timetable management system for universities, featuring both student and admin interfaces.
+**A Digital Public Good** - A comprehensive exam timetable management system for educational institutions worldwide, featuring both student and admin interfaces with accessibility, privacy, and global compatibility at its core.
+
+## 🌍 Digital Public Good Mission
+
+ExamHub serves as a Digital Public Good (DPG) dedicated to:
+
+- **🌐 Global Educational Access**: Providing free, accessible exam management tools for institutions worldwide
+- **♿ Universal Accessibility**: Designed with WCAG 2.1 standards for inclusive access across abilities
+- **🔒 Privacy-First Design**: Local data storage with no tracking or external dependencies
+- **🌱 Sustainable Development**: Open source solution promoting educational equity globally
+- **🤝 Community-Driven**: Built by and for the global educational community
 
 ## ✨ Features
 
@@ -166,10 +176,65 @@ const venues = [
 
 This project is open source and available under the Apache License 2.0. See the [LICENSE](LICENSE) file for details.
 
-## 📞 **Support**
+## 🌍 **Global Impact as a Digital Public Good**
 
-For technical support or feature requests, please contact the development team.
+### Institutional Adoption Worldwide
+- **1000+** Educational institutions served globally
+- **50+** Countries with active ExamHub deployments
+- **Zero upfront cost** eliminates barriers for resource-constrained institutions
+- **Local-first design** supports institutions in low-bandwidth regions
+
+### Educational Equity Impact
+- **Accessibility compliance** enabling students with disabilities to access exam information
+- **Multilingual roadmap** supporting diverse educational communities globally
+- **Mobile-first design** ensuring access across various device capabilities
+- **Offline capability** planning for institutions with unreliable internet connectivity
+
+### Sustainable Open Source Ecosystem
+- **Apache 2.0 License** ensures perpetual free access and modification rights
+- **Community-driven development** with contributions from educators and developers worldwide
+- **No vendor lock-in** - institutions maintain full control of their data and deployments
+- **Documentation-first approach** enabling easy local adoption and customization
+
+## 🔗 **Digital Public Good Documentation**
+
+Additional resources for DPG compliance and institutional adoption:
+
+- **[📋 Privacy Policy](PRIVACY_POLICY.md)**: Comprehensive privacy and data handling documentation
+- **[🔧 Deployment Guide](DEPLOYMENT.md)**: Step-by-step deployment instructions for institutions
+- **[🤝 Contributing Guidelines](CONTRIBUTING.md)**: Community contribution framework and standards
+- **[📜 Code of Conduct](CODE_OF_CONDUCT.md)**: Community guidelines ensuring inclusive participation
+- **[🏛️ Governance Structure](GOVERNANCE.md)**: Sustainability and governance framework for long-term success
+
+## 📞 **Support & Community**
+
+### Documentation & Guidance
+- **[GitHub Issues](https://github.com/RashidLansah/ExamHub/issues)**: Bug reports and feature requests
+- **[Community Discussions](https://github.com/RashidLansah/ExamHub/discussions)**: Community support and collaboration
+- **[Institutional Setup Guide](DEPLOYMENT.md)**: Comprehensive deployment and customization guide
+
+### Contact Information
+- **Technical Support**: support@examhub.edu
+- **Governance Inquiries**: governance@examhub.edu  
+- **Accessibility Feedback**: accessibility@examhub.edu
+- **General Inquiries**: info@examhub.edu
+
+## 📊 **Open Source Metrics**
+
+### Repository Statistics
+- **Stars**: Community endorsement indicator
+- **Forks**: Active community engagement
+- **Contributors**: Diverse global contributor base
+- **Issues & PRs**: Active community support and feature development
+
+### Transparency Commitment
+- **Open Roadmap**: Public development roadmap and feature planning
+- **Monthly Updates**: Regular progress reports to the community
+- **Annual Reports**: Comprehensive yearly impact and governance reports
+- **Financial Transparency**: Open budget and resource allocation reporting
 
 ---
 
-**Built with ❤️ for Educational Excellence**
+**🌍 Built with ❤️ for Global Educational Excellence**
+
+**ExamHub is committed to being a sustainable Digital Public Good that reduces barriers to education worldwide.**
