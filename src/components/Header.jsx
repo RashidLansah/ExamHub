@@ -21,10 +21,10 @@ const Header = ({ onViewMyExams, savedExamsCount }) => {
             </div>
             <div>
               <h1 className="text-2xl font-bold text-white">
-                TATU Exams Timetable Checker
+                ExamHub
               </h1>
               <p className="text-blue-100 text-sm">
-                Tamale Technical University • Academic Excellence
+                University Exam Management • Academic Excellence
               </p>
             </div>
           </div>

@@ -1,6 +1,6 @@
-# 🎓 TATU Exams Timetable Checker
+# 🎓 ExamHub
 
-A comprehensive exam timetable management system for Tamale Technical University, featuring both student and admin interfaces.
+A comprehensive exam timetable management system for universities, featuring both student and admin interfaces.
 
 ## ✨ Features
 
@@ -172,4 +172,4 @@ For technical support or feature requests, please contact the development team.
 
 ---
 
-**Built with ❤️ for Tamale Technical University**
+**Built with ❤️ for Educational Excellence**

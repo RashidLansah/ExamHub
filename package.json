@@ -1,16 +1,16 @@
 {
-  "name": "exam-timetable",
+  "name": "examhub",
   "private": false,
   "version": "1.0.0",
   "description": "A comprehensive exam timetable management system for universities with student and admin interfaces",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/RashidLansah/exam-timetable.git"
+    "url": "https://github.com/RashidLansah/examhub.git"
   },
-  "homepage": "https://github.com/RashidLansah/exam-timetable#readme",
+  "homepage": "https://github.com/RashidLansah/examhub#readme",
   "keywords": [
-    "exam-timetable",
+    "examhub",
     "university",
     "education",
     "react",
