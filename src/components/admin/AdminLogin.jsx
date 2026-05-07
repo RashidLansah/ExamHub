@@ -16,7 +16,7 @@ const AdminLogin = ({ onLogin }) => {
     e.preventDefault()
     
     // Simple authentication - in production, this would be server-side
-    if (credentials.username === "exam_officer" && credentials.password === "tatu2024") {
+    if (credentials.username === "examofficer" && credentials.password === "TaTU@2025") {
       onLogin(true)
       localStorage.setItem("adminLoggedIn", "true")
     } else {
@@ -109,11 +109,8 @@ const AdminLogin = ({ onLogin }) => {
           </form>
           
           <div className="mt-6 text-center">
-            <p className="text-sm text-gray-500">
-              Demo Credentials: <br />
-              <span className="font-mono bg-gray-100 px-2 py-1 rounded text-xs">
-                username: exam_officer | password: tatu2024
-              </span>
+            <p className="text-sm text-gray-400">
+              Contact your system administrator if you need access.
             </p>
           </div>
         </CardContent>

@@ -1,0 +1,26 @@
+[
+  {
+    "id": "bt",
+    "name": "Building Technology",
+    "indexPrefix": "BT",
+    "enrolment": { "100": 110, "200": 95, "300": 80, "400": 65 }
+  },
+  {
+    "id": "cs",
+    "name": "Computer Science",
+    "indexPrefix": "CS",
+    "enrolment": { "100": 120, "200": 98, "300": 85, "400": 70 }
+  },
+  {
+    "id": "ee",
+    "name": "Electrical Engineering",
+    "indexPrefix": "EE",
+    "enrolment": { "100": 100, "200": 88, "300": 74, "400": 60 }
+  },
+  {
+    "id": "me",
+    "name": "Mechanical Engineering",
+    "indexPrefix": "ME",
+    "enrolment": { "100": 105, "200": 90, "300": 76, "400": 62 }
+  }
+]

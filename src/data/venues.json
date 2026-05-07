@@ -1,0 +1,21 @@
+[
+  { "id": "r1", "name": "R1", "block": "R Block", "capacity": 45 },
+  { "id": "r2", "name": "R2", "block": "R Block", "capacity": 45 },
+  { "id": "r3", "name": "R3", "block": "R Block", "capacity": 45 },
+  { "id": "r4", "name": "R4", "block": "R Block", "capacity": 40 },
+  { "id": "r5", "name": "R5", "block": "R Block", "capacity": 50 },
+  { "id": "r6", "name": "R6", "block": "R Block", "capacity": 50 },
+  { "id": "r7", "name": "R7", "block": "R Block", "capacity": 60 },
+  { "id": "r8", "name": "R8", "block": "R Block", "capacity": 60 },
+  { "id": "b1", "name": "B1", "block": "B Block", "capacity": 50 },
+  { "id": "b2", "name": "B2", "block": "B Block", "capacity": 50 },
+  { "id": "b3", "name": "B3", "block": "B Block", "capacity": 45 },
+  { "id": "b4", "name": "B4", "block": "B Block", "capacity": 45 },
+  { "id": "ict1", "name": "ICT Lab 1", "block": "ICT Block", "capacity": 30 },
+  { "id": "ict2", "name": "ICT Lab 2", "block": "ICT Block", "capacity": 30 },
+  { "id": "ict3", "name": "ICT Lab 3", "block": "ICT Block", "capacity": 35 },
+  { "id": "nb1", "name": "NB1", "block": "New Block", "capacity": 55 },
+  { "id": "nb2", "name": "NB2", "block": "New Block", "capacity": 55 },
+  { "id": "nb3", "name": "NB3", "block": "New Block", "capacity": 50 },
+  { "id": "nb4", "name": "NB4", "block": "New Block", "capacity": 50 }
+]

@@ -8,7 +8,8 @@ import { Card, CardContent } from "../components/ui/Card"
 import { filterExams } from "../lib/filters"
 import { groupByDate } from "../lib/utils"
 import examsData from "../data/exams.json"
-import { Calendar, Clock, MapPin, BookOpen } from "lucide-react"
+import { Calendar, Clock, MapPin, BookOpen, Download } from "lucide-react"
+import { generateExamPdf } from "../lib/generatePdf"
 
 const Home = () => {
   const [exams, setExams] = useState(examsData)
@@ -154,7 +155,19 @@ const Home = () => {
         )}
 
         {/* Exam Results */}
-        {filteredExams.length === 0 ? (
+        {exams.length === 0 ? (
+          <div className="text-center py-24">
+            <div className="max-w-sm mx-auto">
+              <div className="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Calendar className="h-10 w-10 text-blue-500" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Timetable not yet published</h3>
+              <p className="text-gray-500 text-sm leading-relaxed">
+                The exam timetable hasn't been released yet. Check back soon or contact your exam office.
+              </p>
+            </div>
+          </div>
+        ) : filteredExams.length === 0 ? (
           <EmptyState onResetFilters={handleResetFilters} />
         ) : (
           <div>
@@ -192,6 +205,16 @@ const Home = () => {
             )}
           </div>
           
+          {savedExamsData.length > 0 && (
+            <button
+              onClick={() => generateExamPdf(savedExamsData, "My Exam Timetable")}
+              className="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition-colors font-medium text-sm"
+            >
+              <Download className="h-4 w-4" />
+              Download PDF
+            </button>
+          )}
+
           {savedExamsData.length === 0 ? (
             <div className="text-center py-8 text-gray-600">
               <div className="p-4 bg-yellow-50 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
@@ -210,14 +233,34 @@ const Home = () => {
                         <h4 className="font-medium text-sm text-gray-900 mb-1">
                           {exam.courseCode} - {exam.courseTitle}
                         </h4>
-                        <p className="text-xs text-gray-600 mb-2">
-                          {exam.startTime} • {exam.venue}
+                        <p className="text-xs text-gray-600 mb-1">
+                          {exam.startTime} - {exam.endTime}
                         </p>
-                        <div className="flex items-center gap-2 text-xs text-gray-500">
+                        <div className="flex items-center gap-2 text-xs text-gray-500 mb-1">
                           <span>{exam.programme}</span>
                           <span>•</span>
                           <span>Level {exam.level}</span>
                         </div>
+                        {exam.allocations && exam.allocations.length > 0 ? (
+                          <div className="mt-2 space-y-1">
+                            {exam.allocations.map((alloc, idx) => (
+                              <div key={idx} className="flex items-center gap-2 text-xs bg-purple-50 p-1.5 rounded">
+                                <MapPin className="h-3 w-3 text-purple-500 flex-shrink-0" />
+                                <span className="font-medium text-purple-800">{alloc.venueName}</span>
+                                <span className="text-gray-500">({alloc.numStudents})</span>
+                                {alloc.indexStart && alloc.indexEnd && (
+                                  <span className="font-mono text-gray-500 text-[10px]">
+                                    {alloc.indexStart}–{alloc.indexEnd}
+                                  </span>
+                                )}
+                              </div>
+                            ))}
+                          </div>
+                        ) : (
+                          <p className="text-xs text-gray-500 flex items-center gap-1">
+                            <MapPin className="h-3 w-3" /> {exam.venue}
+                          </p>
+                        )}
                       </div>
                       <button
                         onClick={() => handleSaveToggle(exam.id, false)}
@@ -234,6 +277,16 @@ const Home = () => {
           )}
         </div>
       </Sheet>
+
+      {/* Discreet admin access — not shown prominently to students */}
+      <footer className="mt-12 pb-6 text-center print:hidden">
+        <a
+          href="/admin"
+          className="text-xs text-gray-300 hover:text-gray-400 transition-colors"
+        >
+          Staff / Admin Access
+        </a>
+      </footer>
     </div>
   )
 }

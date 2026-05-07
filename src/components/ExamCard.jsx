@@ -73,14 +73,46 @@ const ExamCard = ({ exam, onSaveToggle, isSaved = false }) => {
               </div>
             </div>
 
-            {/* Venue with enhanced styling */}
-            <div className="flex items-center gap-3">
-              <div className="p-2 bg-purple-100 rounded-lg">
-                <MapPin className="h-5 w-5 text-purple-600" />
+            {/* Venue with allocation details */}
+            <div>
+              <div className="flex items-center gap-3 mb-2">
+                <div className="p-2 bg-purple-100 rounded-lg">
+                  <MapPin className="h-5 w-5 text-purple-600" />
+                </div>
+                {exam.allocations && exam.allocations.length > 0 ? (
+                  <span className="text-sm font-medium text-gray-700">
+                    Venue{exam.allocations.length > 1 ? "s" : ""} & Seating
+                  </span>
+                ) : (
+                  <Badge variant="outline" className="text-sm px-4 py-2 font-medium border-2">
+                    {exam.venue}
+                  </Badge>
+                )}
               </div>
-              <Badge variant="outline" className="text-sm px-4 py-2 font-medium border-2">
-                📍 {exam.venue}
-              </Badge>
+
+              {exam.allocations && exam.allocations.length > 0 && (
+                <div className="ml-11 space-y-2">
+                  {exam.allocations.map((alloc, idx) => (
+                    <div key={idx} className="flex items-center gap-3 p-2.5 bg-purple-50 rounded-lg border border-purple-100">
+                      <span className="font-semibold text-purple-800 text-sm min-w-[3rem]">
+                        {alloc.venueName}
+                      </span>
+                      <span className="text-xs text-gray-500">|</span>
+                      <span className="text-sm text-gray-700">
+                        {alloc.numStudents} student{alloc.numStudents !== 1 ? "s" : ""}
+                      </span>
+                      {alloc.indexStart && alloc.indexEnd && (
+                        <>
+                          <span className="text-xs text-gray-500">|</span>
+                          <span className="text-xs font-mono bg-white px-2 py-0.5 rounded border text-gray-600">
+                            Index: {alloc.indexStart} – {alloc.indexEnd}
+                          </span>
+                        </>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
 
