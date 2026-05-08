@@ -35,6 +35,7 @@ const AdminDashboard = ({
   const [showWizard, setShowWizard] = useState(false)
 
   const programmes = [...new Set(exams.map(exam => exam.programme))]
+  const programmeNames = programmesList.map(p => typeof p === "string" ? p : p.name)
   const levels = [...new Set(exams.map(exam => exam.level))]
 
   const filteredExams = exams.filter(exam => {
@@ -442,7 +443,7 @@ const AdminDashboard = ({
                 exams={exams}
                 onAddExam={(prefill) => handleAddExam(prefill)}
                 onEditExam={handleEditExam}
-                programmes={programmesList}
+                programmes={programmeNames}
               />
             )}
 
