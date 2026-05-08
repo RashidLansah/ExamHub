@@ -7,7 +7,13 @@ import defaultProgrammes from "../data/programmes.json"
 import defaultStaff from "../data/staff.json"
 
 const Admin = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false)
+  const [isLoggedIn, setIsLoggedIn] = useState(() => {
+    const DATA_VERSION = "v2"
+    if (localStorage.getItem("dataVersion") !== DATA_VERSION) {
+      return false
+    }
+    return localStorage.getItem("adminLoggedIn") === "true"
+  })
   const [exams, setExams] = useState(examsData)
   const [venues, setVenues] = useState(defaultVenues)
   const [programmes, setProgrammes] = useState(defaultProgrammes)
@@ -27,14 +33,6 @@ const Admin = () => {
       localStorage.removeItem("schoolName")
       localStorage.removeItem("semesterTitle")
       localStorage.setItem("dataVersion", DATA_VERSION)
-    }
-  }, [])
-
-  // Check if admin is already logged in
-  useEffect(() => {
-    const adminStatus = localStorage.getItem("adminLoggedIn")
-    if (adminStatus === "true") {
-      setIsLoggedIn(true)
     }
   }, [])
 
